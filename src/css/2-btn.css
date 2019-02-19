@@ -3,21 +3,21 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  background: transparent;
+  padding: 0;
   border: none;
+  
   font-family: 'Century Gothic', Arial, sans-serif;
   font-weight: 400;
-  color: #fff;
   font-size: 18px;
-  width: 170px;
-  height: 56px;
-  padding: 0;
-  cursor: pointer;
   white-space: nowrap;
   text-decoration: none;
   text-align: center;
+  background: transparent;
+  color: #fff;
+  
+  cursor: pointer;
 }
-
+/* 
 .btn-main {
   border: 2px solid #991717;
   color: #991717;
@@ -29,5 +29,5 @@
 .btn-main:focus {
  background-color: #bd5e5e;
  color: #fff;
-}
+} */
 

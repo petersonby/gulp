@@ -10,10 +10,10 @@ body {
   justify-content: flex-start;
   flex-direction: column;
   width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: normal;
-  overflow-x: hidden;
-  min-height: 100vh;
   color: #fff;
 }
 
@@ -23,11 +23,9 @@ body {
 
 .footer {
   flex: 0 0 auto;
-  padding-top: 65px;
-  position: relative;
 }
 
-.wrapper {
+.container {
   max-width: 1210px;
   margin: 0 auto;
   padding: 0 20px;
