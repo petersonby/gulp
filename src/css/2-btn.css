@@ -1,0 +1,33 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: transparent;
+  border: none;
+  font-family: 'Century Gothic', Arial, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 18px;
+  width: 170px;
+  height: 56px;
+  padding: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-main {
+  border: 2px solid #991717;
+  color: #991717;
+  border-radius: 25px;
+  transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s, color 0.4s ease 0s;
+}
+
+.btn-main:hover,
+.btn-main:focus {
+ background-color: #bd5e5e;
+ color: #fff;
+}
+
