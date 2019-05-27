@@ -1,4 +1,4 @@
-const { watch } = require('gulp');
+const { watch,series } = require('gulp');
 const styles = require('./styles');
 const scripts = require('./scripts');
 const svgSprites = require('./svgSprites');
