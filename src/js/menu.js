@@ -1,28 +1,32 @@
-const burger = $('.menu-mobile__toggle');
-const menu = $('.menu-mobile__list');
-const links = $('.menu-mobile__link');
-let open = false;
+const menu = document.querySelector('.menu');
+const burger = document.querySelector('.menu__mobile');
+const menuClose = document.querySelector('.menu__close');
+const links = document.querySelectorAll('.menu__link');
+let menuOpen = false;
 
-burger.click(function() {
-  if (!open) {
-    burger.addClass('menu-mobile__toggle_open');
-    menu
-      .css("display", "flex")
-      .hide()
-      .fadeIn();
-  } else {
-    burger.removeClass('menu-mobile__toggle_open');
-    menu.fadeOut();
-  }
-  open = !open;
-});
+if(burger) {
 
-links.each(function() {
-  $(this).click(function() {
-    if (open) {
-      burger.removeClass('menu-mobile__toggle_open');
-      menu.fadeOut();
-      open = !open;
+  burger.onclick = () => {
+    if (!menuOpen) {
+      menu.classList.add('menu_open');
+      setTimeout(() => menu.classList.add('menu_trans'), 100);
+      menuOpen = !menuOpen;
+    } else {
+      remove();
     }
-  });
-});
+  }
+
+  links.forEach(link => link.addEventListener('click', remove));
+
+  menuClose.addEventListener('click', remove);
+
+
+  function remove() {
+    if (menuOpen) {
+      menu.classList.remove('menu_trans');
+      setTimeout(() => menu.classList.remove('menu_open'), 300);
+      menuOpen = !menuOpen;
+    }
+  }
+
+}

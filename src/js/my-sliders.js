@@ -1,12 +1,17 @@
-if ($('*').is('.slider__main')) {
+if (document.querySelector('.js-slider')) {
   const slider = tns({
-    container: '.slider__main',
+    container: '.js-slider',
     items: 1,
-    autoplay: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
     autoplayButton: false,
     autoplayButtonOutput: false,
-    controls: false,
-    nav: true,
-    navPosition: "bottom"
+    controls: true,
+    nav: false,
+    responsive: {
+      400: {
+        items: 2
+      }
+    }
   });
 }
