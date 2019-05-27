@@ -17,7 +17,7 @@ npm run build
 ```
 
 ## Includes:
-1. Gulp tasks
+#### 1. Gulp tasks
   * `gulp` or `gulp default` – default task, builds assets, starts watching directories for changes and reload browser
   * `gulp build` – rebuilds all assets
   * `gulp watcher` – starts watching directories for changes
@@ -27,9 +27,9 @@ npm run build
   * `gulp scripts` – scripts compilation (include: concat, uglify, sourcemaps, babel)
   * `gulp svgSprites` – create svgSprite (include: concat, minify)
   * `gulp assets` – other assets compilation
-2. HTML
+#### 2. HTML
   Simple template for html-coding
-3. CSS
+#### 3. CSS
   Basic styles for (almost) every site
-4. JS
+#### 4. JS
   Include: Polyfill for 'forEach', Animated scroll to anchors, mobile burger menu, tiny-slider
