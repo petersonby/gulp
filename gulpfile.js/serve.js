@@ -1,10 +1,11 @@
-const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 
-gulp.task('serve', function() {
+function serve() {
 	browserSync.init({
 		server: 'build'
 	});
 
 	browserSync.watch('build/**/*.*').on('change', browserSync.reload);
-});
+}
+
+exports.serve = serve;

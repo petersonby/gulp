@@ -1,12 +1,12 @@
-const gulp = require('gulp');
+const {src, dest} = require('gulp');
 const gulpIf = require('gulp-if');
 const svgSprite = require('gulp-svg-sprite');
 const svgo = require('gulp-svgo');
 
 const isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
-gulp.task('svgSprite', function () {
-	return gulp.src('src/assets/img/*.svg')
+function svgSprites() {
+	return src('src/assets/img/*.svg')
 		.pipe(svgSprite({
       mode: {
         stack: {
@@ -15,5 +15,7 @@ gulp.task('svgSprite', function () {
       },
     }))
     .pipe(gulpIf(!isDev,svgo()))
-		.pipe(gulp.dest('build/sprite'));
-});
+		.pipe(dest('build/sprite'));
+}
+
+exports.svgSprites = svgSprites;
