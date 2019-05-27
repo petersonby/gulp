@@ -18,4 +18,4 @@ function svgSprites() {
 		.pipe(dest('build/sprite'));
 }
 
-exports.svgSprites = svgSprites;
+module.exports = svgSprites;

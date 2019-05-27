@@ -5,4 +5,4 @@ function assets() {
 		.pipe(dest('build'));
 }
 
-exports.assets = assets;
+module.exports = assets;

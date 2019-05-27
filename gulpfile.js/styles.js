@@ -19,4 +19,4 @@ function styles() {
 	  .pipe(dest('build'));
 }
 
-exports.styles = styles;
+module.exports = styles;

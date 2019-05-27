@@ -27,4 +27,4 @@ function scripts() {
     .pipe(dest('build'));
 }
 
-exports.scripts = scripts;
+module.exports = scripts;

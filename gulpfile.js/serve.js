@@ -1,11 +1,12 @@
 const browserSync = require('browser-sync').create();
 
-function serve() {
+function serve(done) {
 	browserSync.init({
 		server: 'build'
 	});
 
 	browserSync.watch('build/**/*.*').on('change', browserSync.reload);
+	done();
 }
 
-exports.serve = serve;
+module.exports = serve;

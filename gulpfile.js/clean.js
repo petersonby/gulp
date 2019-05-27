@@ -4,4 +4,4 @@ function clean() {
 	return del('build');
 }
 
-exports.clean = clean;
+module.exports = clean;
