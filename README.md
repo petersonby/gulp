@@ -2,7 +2,11 @@
 
 ## Install
 ```
-git clone https://github.com/petersonby/gulp.git
+git clone --depth 1 git@github.com/petersonby/gulp.git
+git commit --amend --reset-author -m 'chore(project): init project'
+git remote set-url origin <url> // <url> – new repo
+git push origin master
+
 npm install
 ```
 
