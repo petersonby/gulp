@@ -16,7 +16,7 @@ function styles() {
 		.pipe(concat('style.css'))
 		.pipe(postcss(plugins))
 		.pipe(gulpIf(!isDev, csso()))
-	  .pipe(dest('build'));
+	  .pipe(dest('build/css'));
 }
 
 module.exports = styles;
