@@ -1,5 +1,5 @@
-function animate(e) {
-  if(this.href.match(/#/)) {
+function animate() {
+  if(this.href.match(/#/)){
     const speed = 0.2;
     const w = window.pageYOffset;
     const hash = this.href.replace(/[^#]*(.*)/, '$1');

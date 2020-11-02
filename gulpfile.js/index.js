@@ -8,15 +8,15 @@ const svgSprites = require('./svgSprites');
 const watcher = require('./watcher');
 
 function build(done) { 
-	return series(
-		clean, 
-		svgSprites,
-		parallel(styles, scripts, assets)
-		)(done)
+  return series(
+    clean, 
+    svgSprites,
+    parallel(styles, scripts, assets)
+    )(done)
 }
 
 function defaultTask() {
-	return series(build, parallel(watcher, serve))()
+  return series(build, parallel(watcher, serve))()
 }
 
 exports.serve = serve;

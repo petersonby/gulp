@@ -1,7 +1,7 @@
 const del = require('del');
 
 function clean() {
-	return del('build');
+  return del('build');
 }
 
 module.exports = clean;
