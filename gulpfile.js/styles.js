@@ -5,6 +5,7 @@ const concat = require('gulp-concat');
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
+const combineMediaQueries = require("postcss-combine-media-query");
 
 const yargs = require('yargs');
 const PROD = yargs.argv.prod;
@@ -12,7 +13,8 @@ const PROD = yargs.argv.prod;
 
 function styles() {
 	const plugins = [
-		autoprefixer()
+		autoprefixer(),
+		combineMediaQueries()
 	];
 	
   return src('src/scss/**/*.scss')
