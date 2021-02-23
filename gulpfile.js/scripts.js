@@ -1,6 +1,7 @@
 const {src, dest} = require('gulp');
-const webpack = require('webpack-stream');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const webpack = require('webpack');
+const gulpWebpack = require('webpack-stream');
+const TerserPlugin = require("terser-webpack-plugin");
 const eslint = require('gulp-eslint');
 
 const yargs = require('yargs');
@@ -10,7 +11,7 @@ function scripts() {
   return src(['src/js/_polyfill.js','src/js/**/*.js'])
     .pipe(eslint())
     .pipe(eslint.format())
-    .pipe(webpack({
+    .pipe(gulpWebpack({
       module: {
         rules: [
           {
@@ -29,12 +30,12 @@ function scripts() {
       devtool: !PROD ? 'inline-source-map' : false,
       optimization: {
         minimize: PROD,
-        minimizer: [new UglifyJsPlugin()],
+        minimizer: [new TerserPlugin()],
       },
       output: {
         filename: 'bundle.js'
       }
-    }))
+    }, webpack))
     .pipe(dest('build'));
 }
 
