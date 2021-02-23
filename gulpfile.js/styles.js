@@ -6,7 +6,8 @@ const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 
-const isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
+const yargs = require('yargs');
+const PROD = yargs.argv.prod;
 
 
 function styles() {
@@ -15,10 +16,10 @@ function styles() {
 	];
 	
   return src('src/scss/**/*.scss')
-  		.pipe(sass().on('error', sass.logError))
+		.pipe(sass().on('error', sass.logError))
 		.pipe(concat('style.css'))
 		.pipe(postcss(plugins))
-		.pipe(gulpIf(!isDev, csso()))
+		.pipe(gulpIf(PROD, csso()))
 	  .pipe(dest('build/css'));
 }
 

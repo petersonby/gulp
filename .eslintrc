@@ -1,3 +1,9 @@
 {
-  "extends": ["airbnb-base"]
+  "extends": ["airbnb-base"],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "eol-last": ["error", "never"]
+  }
 }
