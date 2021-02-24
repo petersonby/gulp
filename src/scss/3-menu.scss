@@ -1,3 +1,5 @@
+@import "_vars.scss";
+
 .menu {
   &__list {
     list-style: none;
@@ -9,14 +11,12 @@
   }
 
   &__item {
-    margin-right: 5px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    @media all and (max-width:1210px) {
-      background: pink;
+    & + .menu__item {
+      margin-left: 20px;
+  
+      @media all and (max-width: $md) {
+        margin-left: 10px;
+      }
     }
   }
 
@@ -26,10 +26,6 @@
     &:hover,
     &:focus {
       outline: none;
-    }
-
-    @media all and (max-width:1210px) {
-      color: red;
     }
   }
 }
