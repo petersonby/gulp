@@ -9,24 +9,24 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  
+  {% set headerExtra = 'header_opacity' %}
+  {% block header %}
+    {% include "header.njk" %}
+  {% endblock %}
+
   <main class="main">
-    <header class="header">
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a href="" class="menu__link">link</a>
-          </li>
-          <li class="menu__item">
-            <a href="" class="menu__link">link</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div class="container">
+      
+      {% block slider %}
+        {% include "slider.njk" %}
+      {% endblock %}
+    </div>
   </main>
 
-  <footer class="footer">
-
-  </footer>
+  {% block footer %}
+    {% include "footer.njk" %}
+  {% endblock %}
 
   <script src="./bundle.js"></script>
 </body>

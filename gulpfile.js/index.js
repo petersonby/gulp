@@ -6,12 +6,13 @@ const scripts = require('./scripts');
 const styles = require('./styles');
 const svgSprites = require('./svgSprites');
 const watcher = require('./watcher');
+const pages = require('./pages');
 
 function build(done) { 
   return series(
     clean, 
     svgSprites,
-    parallel(styles, scripts, assets)
+    parallel(styles, scripts, pages, assets)
     )(done)
 }
 

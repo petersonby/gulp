@@ -22,10 +22,12 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "gulp": "^4.0.2",
+    "gulp-beautify": "^3.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
     "gulp-eslint": "^6.0.0",
     "gulp-if": "^2.0.2",
+    "gulp-nunjucks-render": "^2.2.3",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-svg-sprite": "^1.5.0",
@@ -42,5 +44,8 @@
   "browserslist": [
     "last 2 version",
     "> 1%"
-  ]
+  ],
+  "dependencies": {
+    "tiny-slider": "^2.9.3"
+  }
 }

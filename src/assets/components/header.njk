@@ -1,0 +1,26 @@
+{% block header %}
+<header class="header {{headerExtra}}">
+  <div class="container header__container">
+    <a href="./index.html" class="header__logo">
+      <img src="../img/logo.svg" alt="Logo">
+    </a>
+
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item menu__item_has-submenu">
+          <a href="" class="menu__link">link</a>
+
+          <ul>
+            <li><a href="">sublink</a></li>
+            <li><a href="">sublink</a></li>
+            <li><a href="">sublink</a></li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link">link</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+{% endblock %}

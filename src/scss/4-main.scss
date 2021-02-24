@@ -1,1 +1,13 @@
 @import "_vars.scss";
+
+// Header
+
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// End Header
