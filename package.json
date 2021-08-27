@@ -41,8 +41,7 @@
     "yargs": "^16.2.0"
   },
   "browserslist": [
-    "last 2 version",
-    "> 1%"
+    "defaults"
   ],
   "dependencies": {
     "tiny-slider": "^2.9.3"
