@@ -1,21 +1,21 @@
 @import "_vars.scss";
 
 .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  border: none;
-  
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 18px;
-  white-space: nowrap;
-  text-decoration: none;
-  text-align: center;
-  background: transparent;
-  color: $main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+    
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 18px;
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+    background: transparent;
+    color: $main;
 
-  cursor: pointer;
+    cursor: pointer;
 }
