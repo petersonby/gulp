@@ -2,20 +2,7 @@
 
 ## Install
 
-#### Option 1
 Click on [Use this template](https://github.com/petersonby/gulp/generate) button.
-#### Option 2
-Via command line:
-
-```
-git clone --depth 1 git@github.com:petersonby/gulp.git
-cd gulp
-git commit --amend --reset-author -m 'chore(project): init project'
-git remote set-url origin <url> // <url> – new repo
-git push origin main
-
-npm install
-```
 
 ## Usage
 Create build and start server for development:
