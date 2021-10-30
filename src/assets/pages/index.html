@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Name</title>
-  <!-- <link rel="preload" href="./fonts/font.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Name</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   
-  {% set headerExtra = 'header_opacity' %}
-  {% block header %}
-    {% include "header.njk" %}
-  {% endblock %}
+    {% set headerExtra = 'header_opacity' %}
+    {% block header %}
+        {% include "header.njk" %}
+    {% endblock %}
 
-  <main class="main">
-    <div class="container">
-      
-      {% block slider %}
-        {% include "slider.njk" %}
-      {% endblock %}
-    </div>
-  </main>
+    <main class="main">
+        <div class="container">
+        
+            {% block slider %}
+                {% include "slider.njk" %}
+            {% endblock %}
+        </div>
+    </main>
 
-  {% block footer %}
-    {% include "footer.njk" %}
-  {% endblock %}
+    {% block footer %}
+        {% include "footer.njk" %}
+    {% endblock %}
 
-  <script src="./bundle.js"></script>
+    <script src="./bundle.js" defer></script>
 </body>
 </html>
