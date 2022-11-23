@@ -17,7 +17,7 @@
     "@babel/preset-env": "^7.13.5",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.2.2",
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.10",
     "del": "^3.0.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
