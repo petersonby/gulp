@@ -4,7 +4,7 @@ const csso = require('gulp-csso');
 const concat = require('gulp-concat');
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const combineMediaQueries = require("postcss-combine-media-query");
 
 const yargs = require('yargs');
